@@ -1,0 +1,81 @@
+-- Found CHOLMOD headers in: /usr/include/suitesparse
+-- Found CHOLMOD library: /usr/lib/x86_64-linux-gnu/libcholmod.so
+-- Found Config headers in: /usr/include/suitesparse
+-- Found Config library: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+-- Found AMD headers in: /usr/include/suitesparse
+-- Found AMD library: /usr/lib/x86_64-linux-gnu/libamd.so
+-- Found CAMD headers in: /usr/include/suitesparse
+-- Found CAMD library: /usr/lib/x86_64-linux-gnu/libcamd.so
+-- Found CCOLAMD headers in: /usr/include/suitesparse
+-- Found CCOLAMD library: /usr/lib/x86_64-linux-gnu/libccolamd.so
+-- Found COLAMD headers in: /usr/include/suitesparse
+-- Found COLAMD library: /usr/lib/x86_64-linux-gnu/libcolamd.so
+-- Adding librt to SuiteSparse_config libraries (required on Linux & Unix [not OSX] if SuiteSparse is compiled with timing).
+-- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+-- Found required Ceres dependency: glog
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Configuring PoseLib...
+-- BUILD_SHARED_LIBS: OFF
+-- CMAKE_BUILD_TYPE: Release
+-- CMAKE_GENERATOR: Single-config
+-- CMAKE_GENERATOR: Ninja
+-- CMAKE_REGISTRY_FOLDER: OFF
+-- Configuring PoseLib... done
+-- Configuring COLMAP...
+-- Enabling LSD support
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: graph program_options system 
+-- Found FreeImage
+--   Includes : /usr/include
+--   Libraries : /usr/lib/x86_64-linux-gnu/libfreeimage.so
+-- Found Metis
+--   Includes : /usr/include
+--   Libraries : /usr/lib/x86_64-linux-gnu/libmetis.so
+-- Found Glog
+--   Target : glog::glog
+-- Found Glew
+--   Includes : /usr/include
+--   Libraries : /usr/lib/x86_64-linux-gnu/libGLEW.so
+-- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+-- Found required Ceres dependency: glog
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+-- Using header-only CGAL
+-- Targetting Ninja
+-- Using /usr/bin/c++ compiler.
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.48")  
+-- Boost include dirs: /usr/include
+-- Boost libraries:    
+-- Using gcc version 4 or later. Adding -frounding-math
+-- Found CGAL
+--   Includes : /usr/include
+--   Libraries : CGAL
+-- Enabling download support
+-- Enabling CUDA support (version: 11.8.89, archs: native)
+-- Disabling GUI support
+-- Disabling GUI also disables OpenGL
+-- Enabling GPU support (OpenGL: OFF, CUDA: ON)
+-- Build type specified as Release
+-- Enabling SIMD support
+-- Disabling interprocedural optimization
+-- Disabling ccache support
+-- Disabling profiling support
+-- Disabling tests
+-- Disabling coverage support
+-- Configuring PoseLib...
+-- Configuring PoseLib... done
+-- Configuring faiss...
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Configuring faiss... done
+-- Configuring COLMAP... done
+-- Enabling CUDA support (version: 11.8.89, archs: native)
+-- Disabling ccache support
+-- Configuring done (6.7s)
+-- Generating done (3.6s)
+-- Build files have been written to: /workspace/repos/glomap/build

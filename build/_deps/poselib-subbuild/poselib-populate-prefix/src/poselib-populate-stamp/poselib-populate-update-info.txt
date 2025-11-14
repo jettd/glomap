@@ -1,0 +1,7 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The patch step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command (connected)=/workspace/repos/glomap/tmp_cmake_3-28-0/cmake-3.28.0-linux-x86_64/bin/cmake;-Dcan_fetch=YES;-P;/workspace/repos/glomap/build/_deps/poselib-subbuild/poselib-populate-prefix/tmp/poselib-populate-gitupdate.cmake
+command (disconnected)=/workspace/repos/glomap/tmp_cmake_3-28-0/cmake-3.28.0-linux-x86_64/bin/cmake;-Dcan_fetch=NO;-P;/workspace/repos/glomap/build/_deps/poselib-subbuild/poselib-populate-prefix/tmp/poselib-populate-gitupdate.cmake
+work_dir=/workspace/repos/glomap/build/_deps/poselib-src

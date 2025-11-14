@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/CMakeFiles/colmap-populate"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/CMakeFiles/colmap-populate.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/CMakeFiles/colmap-populate-complete.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-build.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-configure.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-download.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-install.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-patch.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-test.rule"
+		},
+		{
+			"file" : "/workspace/repos/glomap/build/_deps/colmap-subbuild/colmap-populate-prefix/src/colmap-populate-stamp/colmap-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"colmap-populate"
+		],
+		"name" : "colmap-populate"
+	}
+}
