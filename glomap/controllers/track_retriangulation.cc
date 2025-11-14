@@ -54,10 +54,37 @@ bool RetriangulateTracks(const TriangulatorOptions& options,
   options_colmap.triangulation.min_angle = options.tri_min_angle;
 
   reconstruction_ptr->DeleteAllPoints2DAndPoints3D();
+
+  // Save frame poses before clearing frames
+  std::unordered_map<frame_t, std::optional<colmap::Rigid3d>> frame_poses;
+  std::vector<frame_t> frame_ids_to_clear;
+  for (const auto& [frame_id, frame] : reconstruction_ptr->Frames()) {
+    frame_poses[frame_id] = frame.MaybeRigFromWorld();
+    frame_ids_to_clear.push_back(frame_id);
+  }
+
+  // Clear frames to avoid DataId mismatch when Load() merges database cache.
+  // The issue is that frames from GLOMAP may have stale DataIds that don't
+  // match the database cache (due to different image IDs, camera IDs, or
+  // frame associations). By clearing frames here and letting Load() populate
+  // them from the database cache, we ensure consistency.
+  for (const frame_t frame_id : frame_ids_to_clear) {
+    reconstruction_ptr->DeRegisterFrame(frame_id);
+  }
+  // TearDown removes deregistered frames
+  reconstruction_ptr->TearDown();
+
   reconstruction_ptr->TranscribeImageIdsToDatabase(database);
 
   colmap::IncrementalMapper mapper(database_cache);
   mapper.BeginReconstruction(reconstruction_ptr);
+
+  // Restore frame poses after Load() has populated frames from database cache
+  for (auto& [frame_id, frame] : reconstruction_ptr->Frames()) {
+    if (frame_poses.find(frame_id) != frame_poses.end()) {
+      frame.SetRigFromWorld(frame_poses[frame_id]);
+    }
+  }
 
   // Triangulate all images.
   const auto tri_options = options_colmap.Triangulation();
