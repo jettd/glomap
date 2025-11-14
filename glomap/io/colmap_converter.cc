@@ -306,10 +306,11 @@ void ConvertDatabaseToGlomap(const colmap::Database& database,
   }
 
   // For cameras that are not in any rig, add camera rigs
+  // Use camera_id as rig_id to match database cache behavior
   for (const auto& [camera_id, camera] : cameras) {
     if (cameras_id_to_rig_id.find(camera_id) == cameras_id_to_rig_id.end()) {
       Rig rig;
-      rig.SetRigId(++max_rig_id);
+      rig.SetRigId(camera_id);  // Use camera_id instead of sequential
       rig.AddRefSensor(camera.SensorId());
       rigs[rig.RigId()] = rig;
       cameras_id_to_rig_id[camera_id] = rig.RigId();
@@ -324,9 +325,10 @@ void ConvertDatabaseToGlomap(const colmap::Database& database,
   }
 
   // For images without frames, initialize trivial frames
+  // Use image_id as frame_id to match database cache behavior
   for (auto& [image_id, image] : images) {
     if (image.frame_id == colmap::kInvalidFrameId) {
-      frame_t frame_id = ++max_frame_id;
+      frame_t frame_id = image_id;  // Use image_id instead of sequential
 
       CreateFrameForImage(Rigid3d(),
                           image,
